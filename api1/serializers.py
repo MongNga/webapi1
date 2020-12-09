@@ -16,3 +16,4 @@ class userserializer(serializers.Serializer):
     username = serializers.CharField(default=40)
     pword = serializers.CharField(max_length=20)
     id = serializers.IntegerField()
+
