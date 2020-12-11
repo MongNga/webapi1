@@ -45,12 +45,9 @@ def postuser(request):
         # print("Mong Nga" + pid)
         # cs = User.objects.create(userid=userid, username=username, pword=pword, id=pid)
         # return Response(data=cs.id, status=status.HTTP_200_OK)
-        sql1 = "insert into tbm_user(userid,username,pword,id) values("
-        sql2 = "'" + userid + "','" + username + "','" + pword + "','" + str(pid) + "')"
-        sql = sql1 + sql2
-        # print(sql)
+        sql = "insert into tbm_user(userid,username,pword,id) values("
+        sql += "'" + userid + "','" + username + "','" + pword + "','" + str(pid) + "')"
         cursor = connection.cursor()
-        # print(sql)
         cursor.execute(sql)
 
         # Return value

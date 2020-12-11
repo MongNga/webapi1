@@ -16,6 +16,7 @@ Including another URConf
 # from django.contrib import admin
 from django.urls import path
 from api1.views import getAllUserAPIView, getuser_abc,postuser
+from api1.PhongBan.view_phongban import getuser_abcd
 
 # from api1.v_receiving import getUserAPIView
 
@@ -24,5 +25,5 @@ urlpatterns = [
     path('api/getuser/', getAllUserAPIView.as_view()),
     path('api/getuser_abc/', getuser_abc),
     path('api/postuser/', postuser),
-    # path('api/getuser/', get_user()),
+    path('api1/getuser_abcd/', getuser_abcd),
 ]
