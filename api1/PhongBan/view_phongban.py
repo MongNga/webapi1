@@ -18,7 +18,7 @@ def getuser_abcd(request):
         return Response(data=mydata.data, status=status.HTTP_200_OK)
 
 
-@api_view(['POST'])
+@api_view(['GET', 'POST'])
 def postuser(request):
     if request.method == 'POST':
         mydata = userserializer(data=request.data)
